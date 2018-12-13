@@ -1,0 +1,53 @@
+html { background-image: url("imgs/bulb.jpeg");
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+    vertical-align: middle;
+    font-family: 'Cormorant+Garamond'}
+
+.parallax { height: 100%;
+    width: 100%;}
+
+.h { text-align: center;}
+
+
+#name {color: #FFFFFF;
+    position: absolute;
+    font-size: 275%;
+    letter-spacing: 20px;
+    opacity: .7;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)}
+
+a:hover {color: #FFFFFF;
+    opacity: .5;}
+a:link {text-decoration: none;
+    color: #FFFFFF;}
+
+.parallax a::before,
+.parallax a::after {display: inline-block;
+    opacity: 0;
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+    -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+    transition: transform 0.3s, opacity 0.2s;}
+
+.parallax a::before {margin-right: 10px;
+    content: '[';
+    -webkit-transform: translateX(20px);
+    -moz-transform: translateX(20px);
+    transform: translateX(20px);}
+
+.parallax a::after {margin-left: 10px;
+    content: ']';
+    -webkit-transform: translateX(-20px);
+    -moz-transform: translateX(-20px);
+    transform: translateX(-20px);}
+.parallax a:hover::before,
+.parallax a:hover::after,
+.parallax a:focus::before,
+.parallax a:focus::after { opacity: 1;
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    transform: translateX(0px);}
